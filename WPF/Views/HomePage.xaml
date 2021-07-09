@@ -2,7 +2,7 @@
     x:Class="WPF.Views.HomePage"
     xmlns:prism="http://prismlibrary.com/"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:common="clr-namespace:WPF.Common"
+    xmlns:common="clr-namespace:WPF.Common"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -15,18 +15,62 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock
-            FontSize="32"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top">
-            Home
-        </TextBlock>
+        <StackPanel Orientation="Horizontal">
+            <Label
+                Target="{Binding ElementName=txtUserName}"
+                FontSize="32"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">
+                _You can put an underscore and it works
+            </Label>
+            <TextBox
+                x:Name="txtUserName"
+                VerticalContentAlignment="Center"
+                Width="300"
+                Padding="5"
+                Margin="5" />
+        </StackPanel>
         <WrapPanel Grid.Row="1">
-            <Button Content="List View" Height="100" Width="150" Padding="10" Margin="5" Command="{Binding NavigateCommand}" CommandParameter="{x:Static common:Pages.ListViewPage}"/>
-            <Button Content="Data Grid" Height="100" Width="150" Padding="10" Margin="5" Command="{Binding NavigateCommand}" CommandParameter="{x:Static common:Pages.DataGridPage}"/>
-            <Button Content="ListView" Height="100" Width="150" Padding="10" Margin="5" Command="{Binding NavigateCommand}" CommandParameter="{x:Static common:Pages.DataGridViewPage}"/>
-            <Button Content="ListView" Height="100" Width="150" Padding="10" Margin="5" Command="{Binding NavigateCommand}" CommandParameter="{x:Static common:Pages.HomePage}"/>
-            <Button Content="ListView" Height="100" Width="150" Padding="10" Margin="5" Command="{Binding NavigateCommand}" CommandParameter="{x:Static common:Pages.HomePage}"/>
+            <Button
+                Content="List View"
+                Height="100"
+                Width="150"
+                Padding="10"
+                Margin="5"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Static common:Pages.ListViewPage}" />
+            <Button
+                Content="Data Grid"
+                Height="100"
+                Width="150"
+                Padding="10"
+                Margin="5"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Static common:Pages.DataGridPage}" />
+            <Button
+                Content="ListView"
+                Height="100"
+                Width="150"
+                Padding="10"
+                Margin="5"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Static common:Pages.DataGridViewPage}" />
+            <Button
+                Content="ListView"
+                Height="100"
+                Width="150"
+                Padding="10"
+                Margin="5"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Static common:Pages.HomePage}" />
+            <Button
+                Content="ListView"
+                Height="100"
+                Width="150"
+                Padding="10"
+                Margin="5"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Static common:Pages.HomePage}" />
         </WrapPanel>
     </Grid>
 </UserControl>

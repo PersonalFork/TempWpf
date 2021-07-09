@@ -6,8 +6,17 @@ namespace CSharp
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            TaskLib taskLib = new TaskLib();
+            //taskLib.DownloadFile(10).GetAwaiter().GetResult();
+            //taskLib.DownloadFileWhenAll(10).GetAwaiter().GetResult();
+
+            AutoResetManualReset autoResetManualReset = new AutoResetManualReset();
+            Console.WriteLine("Auto Reset");
+            autoResetManualReset.AutoReset();
+
+            Console.WriteLine("\nManual Reset");
+            autoResetManualReset.ManulReset();
+            Console.ReadLine();
         }
     }
 }
