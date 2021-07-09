@@ -1,0 +1,12 @@
+﻿<Window x:Class="WPF.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        WindowState="Maximized"
+        xmlns:common="clr-namespace:WPF.Common"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="{Binding Title}" Height="350" Width="525">
+    <Grid>
+        <ContentControl Margin="10" prism:RegionManager.RegionName="{x:Static common:Regions.ContentRegion}" />
+    </Grid>
+</Window>

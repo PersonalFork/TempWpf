@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/WPF/bin/Debug
+/WPF/obj
+/.vs/Practice/v15/Server/sqlite3
+/CSharp/bin/Debug
+/CSharp/obj/Debug
